@@ -3,5 +3,5 @@
 # author:       Li Junhao           edwin.jh.lee@gmail.com    edwinjhlee.github.io
 # maintainer:   Li Junhao
 
-echo "Currently refering 'xrc list/v0'" >&2
-xrc list/v0
+echo "Currently refering 'xrc doctest/v0'" >&2
+xrc doctest/v0
