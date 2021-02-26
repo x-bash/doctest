@@ -1,7 +1,5 @@
 # shellcheck shell=bash
 
-debug_init doctest
-
 _doctest_parse_code(){
     awk -f "$(xrc which doctest/v0.awk)" "${1:?Provide file name}"
     # awk -f "$(./v0.awk)" "${1:?Provide file name}"
@@ -13,8 +11,7 @@ _doctest_run_code(){
 
     local script_code="${1:?"Provide script code"}"
     local script_actual_result script_expect_result="${2}"
-    # TODO: How to get rid of it in sh
-    # echo "${script_code:1}" >"$test_script_fifo"
+
     echo "${script_code#> *}" >"$test_script_fifo"
     script_actual_result="$(cat "$out_fifo")"
     if [ ! "$script_actual_result" = "$script_expect_result" ]; then
