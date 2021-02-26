@@ -108,4 +108,4 @@ _doctest_exec_script(){
 #     done
 # }
 
-[ "$#" -ne 0 ] && doctest "$@"
+# [ "$#" -ne 0 ] && doctest "$@"
